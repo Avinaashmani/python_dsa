@@ -18,6 +18,7 @@ class hashfunction:
             hash_key = hash_key + ord(char)
         return hash_key % self.max_no
     
+    
     def __setitem__(self, key, value):
 
         hash_func = self.get_hash(key)
@@ -31,7 +32,6 @@ class hashfunction:
         
         if not found:
             self.arr[hash_func].append((key, value))
-
 
     def __getitem__(self, key):
 
